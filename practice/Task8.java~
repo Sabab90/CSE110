@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Task8{
+    public static void main(String [] args){
+        Scanner sc= new Scanner(System.in);
+        int start= sc.nextInt();
+        int end= sc.nextInt();
+        
+        for( start; start<=end;start++){
+            int digit=0;
+            int temp=start;
+            for(temp; temp>0; temp=temp/10){
+                digit++;
+            }
+            temp=start;
+            int sum=0;
+            for(int j=1; temp<0; j++){
+                int k= temp%10;
+                sum+= Math.pow(k,digit);
+                temp=temp/10;
+            }
+            if(sum==start){
+                System.out.println(start);
+            }
+        }
+    }
+}
+            
+        
+        
+        
